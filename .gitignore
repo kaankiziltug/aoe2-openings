@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+# Replays to test with stay local: they carry players' names.
+tests/replays/*.aoe2record

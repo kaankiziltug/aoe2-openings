@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aoe2-openings"
+version = "0.1.0"
+description = "Read an Age of Empires II: DE replay and get each player's opening, age-up times, army and economy, with the rule behind every call."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Kaan Kızıltuğ" }]
+requires-python = ">=3.10"
+dependencies = [
+  # AoE2Insights' fast-parsing fork of mgz: it reads current Definitive
+  # Edition replays (save version 67 and later) that mgz 1.8 cannot.
+  "mgz-fast>=1.0.0",
+  "aocref>=2.0.37",
+]
+keywords = ["age of empires", "aoe2", "aoe2de", "replay", "aoe2record", "build order", "opening", "mgz"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Topic :: Games/Entertainment :: Real Time Strategy",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/kaankiziltug/aoe2-openings"
+Issues = "https://github.com/kaankiziltug/aoe2-openings/issues"
+"Write-up" = "https://kaankiziltug.com/blog/aoe2meta"
+
+[project.scripts]
+aoe2-openings = "aoe2_openings.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aoe2_openings"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
