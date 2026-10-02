@@ -23,15 +23,13 @@ Age times are when the player clicked to advance, in game time.
 
 These are the rules [AoE2Meta](https://kaankiziltug.com/blog/aoe2meta) used to
 classify more than half a million ranked 1v1 games and show which play styles
-win, by civilization, map and ELO. [OPENINGS.md](OPENINGS.md) lists all 25 of
+win, by civilization, map and ELO. [OPENINGS.md](https://github.com/kaankiziltug/aoe2-openings/blob/main/OPENINGS.md) lists all 25 of
 them in plain English.
 
 ## Install
 
-Not on PyPI yet; install it straight from GitHub:
-
 ```bash
-pip install git+https://github.com/kaankiziltug/aoe2-openings
+pip install aoe2-openings
 ```
 
 Python 3.10 or newer. It reads replays with
@@ -114,7 +112,7 @@ opening.rule    # "drush_archers"
 - **Names follow aocref.** After a patch adds a civilization or map, update
   aocref to get its name.
 - **Tuned on 1v1.** The opening rules were built on ranked 1v1 Random Map;
-  [OPENINGS.md](OPENINGS.md) has the known gaps.
+  [OPENINGS.md](https://github.com/kaankiziltug/aoe2-openings/blob/main/OPENINGS.md) has the known gaps.
 
 ## Tests
 
